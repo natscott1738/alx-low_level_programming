@@ -2,6 +2,14 @@
 #include <stdlib.h>
 #include <time.h>
 
+	/* more head goes here */
+
+	/* betty style doc for function main goes here */
+	/**
+	 * main - Entry point
+ 	 *
+	 * Return: Always 0 (success)
+	 */
 int main(void)
 {
     int n;
@@ -9,7 +17,7 @@ int main(void)
     srand(time(0));
     n = rand() - RAND_MAX / 2;
 
-    /* Check if n is positive, zero, or negative */
+    /* your code goes here */
     if (n > 0)
     {
         printf("%d is positive\n", n);
