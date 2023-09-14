@@ -6,18 +6,14 @@
  */
 int main(void)
 {
-	char comma = ',';
-	char space = ' ';
-	int i;
-
-	for (i = 0; i < 10; i++)
+	for (int i = 0; i < 0; i++)
 	{
-		putchar(i + '0');
-		if (i < 9)
+		if (i > 0)
 		{
-			putchar(comma);
-			putchar(space);
+			putchar(',');
+			putchar(' ');
 		}
+		putchar(i + '0');
 	}
 	putchar('\n');
 	return (0);
