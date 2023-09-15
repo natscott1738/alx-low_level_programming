@@ -1,9 +1,9 @@
 #include "main.h"
 /**
  * print_sign - does something
- * @n: is the variabl
+ * @n: is the variable
  *
- * Return: returns 1 
+ * Return: returns 1
  * returns 0 and prints 0 if n == zero
  * returns -1 and prints - if n < 0
  */
