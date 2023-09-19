@@ -1,27 +1,33 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
 /**
- * main - Entry point
- *
- * Return: Always 0
- */
+  * main - entry point
+  * Description: creates a random key for program 101_crackme
+  * Return: always 0
+  */
 int main(void)
 {
-    char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    int charset_length = sizeof(charset) - 1;
+	    int sum, i, r;
 
-    int password_length = 11; // Adjust the length as needed
+		char decode[27] = "abcdefghijklmnopqrstuvwxyz";
+		char key[30];
 
-    srand(time(NULL));
+		sum = 0;
+		i = 0;
 
-    printf("Generated Password: ");
-    for (int i = 0; i < password_length; i++)
-    {
-        int index = rand() % charset_length;
-        putchar(charset[index]);
-    }
-    putchar('\n');
+		srand(time(NULL));
 
-    return (0);
+		while (sum < 2772)
+		{
+			r = rand() % 10;
+			key[i] = decode[r];
+			sum += key[i];
+			i++;
+		}
+		r = 2772 - sum;
+		key[i] = r;
+		printf("%s\n",  key);
+		return (0);
 }
