@@ -3,16 +3,16 @@
 /**
  *_puts - a function that prints a string
  *
- *@s: this pointer will store the location of string
+ *@str: this pointer will store the location of string
  *
  *Return: 0
  */
-void _puts(char *s)
+void _puts(char *str)
 {
-	while (*s != 0)
+	while (*str != 0)
 	{
-		_putchar(*s);
-		s++;
+		_putchar(*str);
+		str++;
 	}
 	_putchar(10);
 }
