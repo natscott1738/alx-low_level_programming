@@ -11,7 +11,7 @@ int main(void)
 {
 	    int sum, i, r;
 
-		char decode[27] = "abcdefghijklmnopqrstuvwxyz";
+		char decode[27] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@# ";
 		char key[30];
 
 		sum = 0;
