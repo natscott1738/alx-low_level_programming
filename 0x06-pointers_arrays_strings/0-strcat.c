@@ -10,14 +10,14 @@
  */
 char *_strcat(char *des, char *src)
 {
-	int a, b;
+	int i, j;
 
-	for (a = 0; des[a] != 0; a++)
+	for (i = 0; des[i] != 0; i++)
 	{
 	}
-	for (b = 0; src[b] != 0; b++, b++)
+	for (j = 0; src[j] != 0; j++, j++)
 	{
-		des[a] = src[b];
+		des[i] = src[j];
 	}
 	return (des);
 }
