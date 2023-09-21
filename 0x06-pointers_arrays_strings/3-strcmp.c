@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- **_strcmp - a function that compares two strings and tells whether they are greater than, less
- *than, or equal
+ **_strcmp - a function that compares two strings
+ *
  *@s1: first string to be compared
  *@s2: second string to be compared
  *
