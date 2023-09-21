@@ -6,8 +6,8 @@
  * @a: the array to be evaluated
  * @n: the size of the array
  *
- * Return: empty
- * */
+ * Return: nothing
+ */
 void reverse_array(int *a, int n)
 {
 	int begin;
