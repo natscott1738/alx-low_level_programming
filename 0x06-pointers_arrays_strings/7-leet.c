@@ -3,7 +3,7 @@
 /**
  *leet - changes "aA" "eE" "oO" "tT" "lL" to 4 3 0 7 1
  *
- *@s: the pointer 
+ *@s: the pointer
  *
  *Return: the string already converted
  */
