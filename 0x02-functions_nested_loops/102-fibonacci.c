@@ -7,20 +7,18 @@
  */
 int main(void)
 {
-	int i;
-	unsigned long long int fib1 = 1, fib2 = 2, next_fib;
+	long long int fib[50];
 
-	printf("%llu, %llu", fib1, fib2);
-
-	for (i = 2; i < 50; i++)
+	fib[0] = 1;
+	fib[1] = 2;
+	for (int i = 2; i < 50; i++)
 	{
-		next_fib = fib1 + fib2;
-		printf(", %llu", next_fib);
-
-		fib1 = fib2;
-		fib2 = next_fib;
+		fib[i] = fib[i - 1] + fib[i - 2];
 	}
-
-	printf("\n");
-	return (0);
+	for (int i = 0; i < 49; i++)
+	{
+		printf("%lld, ", fib[i]);
+	}
+	printf("%lld\n", fib[49]);
+	return 0;
 }
