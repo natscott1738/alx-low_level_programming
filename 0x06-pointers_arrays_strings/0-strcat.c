@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- **_strcat -  a function that concatenates two strings
+ **_strcat - a function that concatenates two strings
  *
  *@src: pointer that has the string to be joined
  *@des: pointer that will have its string joined with the other
@@ -15,7 +15,7 @@ char *_strcat(char *des, char *src)
 	for (i = 0; des[i] != 0; i++)
 	{
 	}
-	for (j = 0; src[j] != 0; j++, j++)
+	for (j = 0; src[j] != 0; j++, i++)
 	{
 		des[i] = src[j];
 	}
