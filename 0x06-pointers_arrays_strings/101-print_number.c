@@ -3,14 +3,17 @@
 /**
  *
  * print_number - prints an integer
+ * 
  * @n: the integer to be printed
+ *
+ * Return: the integer
  */
 void print_number(int n)
 {
 	if (n < 0)
 	{
-		_putchar('_');
-		n = -m;
+		_putchar('-');
+		n = -n;
 	}
 	if (n / 10 != 0)
 	{
