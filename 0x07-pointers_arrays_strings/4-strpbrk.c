@@ -1,48 +1,27 @@
 #include "main.h"
 
 /**
- *_strstr - locates a substring within a string
+ *_strpbrk - searches a string for any of a set of bytes
  *
- *@haystack: pointer that contains the address of the string to be evaluated
- *@needle: pointer that contains the string to evaluate @haystack
+ *@s: pointer that contains the address of the string to be evaluated
+ *@accept: pointer that contains the string to evaluate s
  *
- *Return: address of the located string in @haystack if no substring is found
- *then retun NULL
+ *Return: address of the first occurrence of accept in the string
  */
-char *_strstr(char *haystack, char *needle)
+char *_strpbrk(char *s, char *accept)
 {
-	int i = 0;
-	int j = 0;
-	int a;
-	int compare = 0;
+	int i;
 
-	if (*needle == 0)
+	while (*s != 0)
 	{
-		return (haystack);
-	}
-	while (haystack[i] != 0)
-	{
-		j = 0;
-		a = i;
-		while (needle[j] != 0)
+		for (i = 0; accept[i] != 0; i++)
 		{
-			if (needle[j] == haystack[a])
+			if (*s == accept[i])
 			{
-				compare = 1;
+				return (s);
 			}
-			else
-			{
-				compare = 0;
-				break;
-			}
-			j++;
-			a++;
 		}
-		if (compare == 1)
-		{
-			return (haystack + i);
-		}
-		i++;
+		s++;
 	}
 	return (0);
 }
