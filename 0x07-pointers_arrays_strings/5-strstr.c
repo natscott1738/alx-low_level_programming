@@ -7,12 +7,12 @@
  *@needle: pointer that contains the string to evaluate @haystack
  *
  *Return: address of the located string in @haystack if no substring is found
- *then return NULL
+ *then retun NULL
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i;
-	int j;
+	int i = 0;
+	int j = 0;
 	int a;
 	int compare = 0;
 
