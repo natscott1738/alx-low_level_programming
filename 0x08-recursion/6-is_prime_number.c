@@ -5,7 +5,7 @@
  * is_prime_number - checks if a number is a prime number
  *
  * @n: the number to be checked
- *
+ * @divisor - the current divisor to check
  * Return: 1 if prime, 0 otherwise
  */
 int is_prime_number(int n)
@@ -18,8 +18,8 @@ int is_prime_number(int n)
 /**
  * check_prime - helper function to check if a number is prime recursivelly
  *
- *@n: the number to be checked
- *@divisor - the current divisor to check
+ * @n: the number to be checked
+ * @divisor - the current divisor to check
  *
  * Return: 1 if prime, 0 otherwise
  */
