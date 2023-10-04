@@ -1,1 +1,1 @@
-this directory contains static libraries
+this directory contains static libraries concept
