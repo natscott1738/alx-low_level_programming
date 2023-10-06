@@ -3,47 +3,46 @@
 #include <stdlib.h>
 
 /**
- *string_nconcat - concatenates two strings
+ *_memset - fills memory with a constant byte n amount of times
  *
- *@s1: first string
- *@s2: second string
- *@n: amount of chars touse of second string
+ *@s: pointer that has the address of the memory to fill
+ *@b: constant byte that will be written into the momory
+ *@n: amount of times the byte will be written into the memory
  *
- *Return: a pointer to the concatenated string or NULL if the process fails
+ *Return: address of the memory where thebyte was written
  */
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i_s1, i_s2, len1, len2;
-	char *a;
+	unsigned int i;
 
-	if (s1 == 0)
-		s1 = "";
-	for (len1 = 0; s1[len1] != 0; len1++)
+	for (i = 0; i < n; i++)
 	{
+		s[i] = b;
 	}
-	if (s2 == 0)
-		s2 = "";
-	for (len2 = 0; s2[len2] != 0; len2++)
+	return (s);
+}
+
+/**
+ *_calloc - allocates memory for an array using malloc
+ *
+ *@nmemb: the amount of spaces that needs to be allocated
+ *@size: size of each of the allocated spaces
+ *
+ *Return: a pointer to the allocated array or NULL if the process fails
+ */
+void *_calloc(unsigned int nmemb, unsigned int size)
+{
+	char *array;
+
+	if (nmemb == 0 || size == 0)
 	{
+		return (NULL);
 	}
-	if (n >= len2)
-		a = malloc(sizeof(char) * (len1 + len2 + 1));
-	else
-		a = malloc(sizeof(char) * (len1 + n + 1));
-	if (a == 0)
-		return (0);
-	for (i_s1 = 0; i_s1 < len1; i_s1++)
-		a[i_s1] = s1[i_s1];
-	if (n >= len2)
+	array = malloc(nmemb * size);
+	if (array == NULL)
 	{
-		for (i_s2 = 0; i_s2 < len2; i_s1++, i_s2++)
-			a[i_s1] = s2[i_s2];
-	}
-	else
-	{
-		for (i_s2 = 0; i_s2 < n; i_s1++, i_s2++)
-			a[i_s1] = s2[i_s2];
-	}
-	a[i_s1] = 0;
-	return (a);
+		return (NULL);
+			}
+	array = _memset(array, 0, nmemb * size);
+	return (array);
 }
