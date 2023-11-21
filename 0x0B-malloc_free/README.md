@@ -1,1 +1,1 @@
-this directory contains malloc concept
+this is the malloc directory
