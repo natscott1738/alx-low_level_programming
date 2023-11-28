@@ -1,1 +1,1 @@
-this directory contains structure and typedef content
+this is the structures directory
