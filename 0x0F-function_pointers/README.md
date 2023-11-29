@@ -1,1 +1,1 @@
-This directory has the functions to pointers essentials
+this is the functions and pointers directory
